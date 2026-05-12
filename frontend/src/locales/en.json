@@ -1,0 +1,37 @@
+{
+  "translation": {
+    "nav_farm2table": "Farm2Table",
+    "nav_marketplace": "Marketplace",
+    "nav_dashboard": "Dashboard",
+    "nav_profile": "Profile",
+    "nav_signout": "Sign out",
+    "nav_login": "Log in",
+    "nav_signup": "Sign up",
+    "nav_notifications": "Notifications",
+    "notif_order_received": "Order #{{id}} received",
+    "notif_message": "New message from {{name}}",
+    "notif_empty": "No new notifications",
+    
+    "home_title": "Fresh From Farm To Your Table",
+    "home_subtitle": "Connect directly with local farmers for the freshest, highest-quality produce.",
+    
+    "marketplace_title": "Fresh Marketplace",
+    "marketplace_subtitle": "Discover the freshest produce directly from local farmers.",
+    
+    "farmer_dashboard_title": "Welcome back, {{name}}",
+    "farmer_dashboard_subtitle": "Here's what's happening with your farm today.",
+    
+    "profile_title": "Your Profile",
+    "profile_edit": "Edit Profile",
+    "profile_save": "Save Changes",
+    "profile_cancel": "Cancel",
+    "profile_name": "Full Name",
+    "profile_email": "Email Address",
+    "profile_phone": "Phone Number",
+    "profile_role": "Role",
+    "profile_address": "Street Address",
+    "profile_city": "City",
+    "profile_state": "State",
+    "profile_zip": "Zip Code"
+  }
+}

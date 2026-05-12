@@ -9,6 +9,7 @@ import FarmerDashboard from './pages/farmer/FarmerDashboard';
 import Marketplace from './pages/consumer/Marketplace';
 import Cart from './pages/consumer/Cart';
 import ProductDetails from './pages/consumer/ProductDetails';
+import Profile from './pages/profile/Profile';
 import useAuthStore from './store/useAuthStore';
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
@@ -52,6 +53,16 @@ function App() {
               element={
                 <ProtectedRoute allowedRoles={['farmer', 'admin']}>
                   <FarmerDashboard />
+                </ProtectedRoute>
+              } 
+            />
+            
+            {/* Profile Route */}
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <Profile />
                 </ProtectedRoute>
               } 
             />

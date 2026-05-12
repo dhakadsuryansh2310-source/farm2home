@@ -1,0 +1,37 @@
+{
+  "translation": {
+    "nav_farm2table": "फार्म2टेबल",
+    "nav_marketplace": "बाज़ार",
+    "nav_dashboard": "डैशबोर्ड",
+    "nav_profile": "प्रोफ़ाइल",
+    "nav_signout": "लॉग आउट",
+    "nav_login": "लॉग इन",
+    "nav_signup": "साइन अप",
+    "nav_notifications": "सूचनाएं",
+    "notif_order_received": "ऑर्डर #{{id}} प्राप्त हुआ",
+    "notif_message": "{{name}} से नया संदेश",
+    "notif_empty": "कोई नई सूचना नहीं",
+    
+    "home_title": "खेत से सीधा आपकी मेज पर",
+    "home_subtitle": "सबसे ताज़ा और उच्च गुणवत्ता वाली उपज के लिए सीधे स्थानीय किसानों से जुड़ें।",
+    
+    "marketplace_title": "ताज़ा बाज़ार",
+    "marketplace_subtitle": "स्थानीय किसानों से सीधे सबसे ताज़ा उपज खोजें।",
+    
+    "farmer_dashboard_title": "वापसी पर स्वागत है, {{name}}",
+    "farmer_dashboard_subtitle": "आज आपके खेत के साथ क्या हो रहा है, यह यहां दिया गया है।",
+    
+    "profile_title": "आपकी प्रोफ़ाइल",
+    "profile_edit": "प्रोफ़ाइल संपादित करें",
+    "profile_save": "परिवर्तन सहेजें",
+    "profile_cancel": "रद्द करें",
+    "profile_name": "पूरा नाम",
+    "profile_email": "ईमेल पता",
+    "profile_phone": "फ़ोन नंबर",
+    "profile_role": "भूमिका",
+    "profile_address": "सड़क का पता",
+    "profile_city": "शहर",
+    "profile_state": "राज्य",
+    "profile_zip": "पिन कोड"
+  }
+}
