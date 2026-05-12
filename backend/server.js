@@ -28,6 +28,10 @@ app.use('/api/orders', require('./routes/orders'));
 app.use('/api/cart', require('./routes/cart'));
 app.use('/api/users', require('./routes/users'));
 
+app.get('/', (req, res) => {
+  res.send('Farm2Table API is running...');
+});
+
 // Error handling middleware
 app.use(errorHandler);
 
