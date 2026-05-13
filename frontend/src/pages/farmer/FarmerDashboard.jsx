@@ -48,17 +48,13 @@ const FarmerDashboard = () => {
       formData.append('price', newProduct.price);
       formData.append('stock', newProduct.stock);
 
-      if (newProduct.images) {
-        for (let i = 0; i < newProduct.images.length; i++) {
-          formData.append('images', newProduct.images[i]);
-        }
+      if (newProduct.images && newProduct.images.length > 0) {
+        Array.from(newProduct.images).forEach(file => {
+          formData.append('images', file);
+        });
       }
 
-      const res = await axios.post('http://localhost:5000/api/products', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        }
-      });
+      const res = await axios.post('http://localhost:5000/api/products', formData);
       setProducts([res.data, ...products]);
       setShowAddModal(false);
       setNewProduct({ name: '', description: '', category: 'Vegetable', price: '', stock: '', images: null });

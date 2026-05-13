@@ -125,10 +125,15 @@ const ProductDetails = () => {
                   <p className="font-bold text-dark">{product.farmerId?.name || 'Local Farmer'}</p>
                 </div>
                 <div className="text-right flex flex-col items-end">
-                  <div className="flex items-center text-sm text-gray-600 gap-1">
+                  <div className="flex items-center text-sm text-gray-600 gap-1 mb-2">
                     <MapPin className="h-4 w-4 text-primary-500" /> 
                     {product.farmerId?.address?.city || 'Local Area'}
                   </div>
+                  {product.farmerId && (
+                    <Link to={`/messages/${product.farmerId._id}`} className="btn-secondary py-1 px-3 text-xs bg-white">
+                      Message Farmer
+                    </Link>
+                  )}
                 </div>
               </div>
 

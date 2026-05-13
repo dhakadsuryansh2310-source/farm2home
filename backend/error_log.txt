@@ -1,0 +1,132 @@
+2026-05-13T04:31:50.388Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:31:53.657Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:31:53.911Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:32:19.791Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:49:02.572Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:49:06.448Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:49:06.934Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:49:07.433Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T04:51:13.473Z - Error: Images only!
+    at checkFileType (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:21:8)
+    at fileFilter (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:28:5)
+    at wrappedFileFilter (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\index.js:45:7)
+    at Multipart.<anonymous> (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\lib\make-middleware.js:183:7)
+    at Multipart.emit (node:events:509:28)
+    at HeaderParser.cb (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2026-05-13T04:51:21.110Z - Error: Images only!
+    at checkFileType (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:21:8)
+    at fileFilter (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:28:5)
+    at wrappedFileFilter (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\index.js:45:7)
+    at Multipart.<anonymous> (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\lib\make-middleware.js:183:7)
+    at Multipart.emit (node:events:509:28)
+    at HeaderParser.cb (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2026-05-13T05:10:28.195Z - Error: Invalid email or password
+    at loginUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:61:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:26:45.710Z - Error: User role consumer is not authorized to access this route
+    at C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:29:19
+    at Layer.handleRequest (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\route.js:157:13)
+    at protect (C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:12:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:27:03.606Z - Error: User role consumer is not authorized to access this route
+    at C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:29:19
+    at Layer.handleRequest (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\route.js:157:13)
+    at protect (C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:12:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:38:30.947Z - Error: User role consumer is not authorized to access this route
+    at C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:29:19
+    at Layer.handleRequest (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\route.js:157:13)
+    at protect (C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:12:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:38:31.459Z - Error: User role consumer is not authorized to access this route
+    at C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:29:19
+    at Layer.handleRequest (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\route.js:157:13)
+    at protect (C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:12:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:38:41.512Z - Error: User role consumer is not authorized to access this route
+    at C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:29:19
+    at Layer.handleRequest (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\win 10\Desktop\f2c\backend\node_modules\router\lib\route.js:157:13)
+    at protect (C:\Users\win 10\Desktop\f2c\backend\middleware\auth.js:12:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:41:38.560Z - Error: Images only!
+    at checkFileType (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:21:8)
+    at fileFilter (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:28:5)
+    at wrappedFileFilter (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\index.js:45:7)
+    at Multipart.<anonymous> (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\lib\make-middleware.js:183:7)
+    at Multipart.emit (node:events:509:28)
+    at HeaderParser.cb (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2026-05-13T05:43:44.278Z - Error: Images only!
+    at checkFileType (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:21:8)
+    at fileFilter (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:28:5)
+    at wrappedFileFilter (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\index.js:45:7)
+    at Multipart.<anonymous> (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\lib\make-middleware.js:183:7)
+    at Multipart.emit (node:events:509:28)
+    at HeaderParser.cb (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2026-05-13T05:43:52.269Z - Error: Images only!
+    at checkFileType (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:21:8)
+    at fileFilter (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:28:5)
+    at wrappedFileFilter (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\index.js:45:7)
+    at Multipart.<anonymous> (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\lib\make-middleware.js:183:7)
+    at Multipart.emit (node:events:509:28)
+    at HeaderParser.cb (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2026-05-13T05:43:56.085Z - Error: Images only!
+    at checkFileType (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:21:8)
+    at fileFilter (C:\Users\win 10\Desktop\f2c\backend\middleware\upload.js:28:5)
+    at wrappedFileFilter (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\index.js:45:7)
+    at Multipart.<anonymous> (C:\Users\win 10\Desktop\f2c\backend\node_modules\multer\lib\make-middleware.js:183:7)
+    at Multipart.emit (node:events:509:28)
+    at HeaderParser.cb (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (C:\Users\win 10\Desktop\f2c\backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (C:\Users\win 10\Desktop\f2c\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2026-05-13T05:59:12.353Z - Error: Product not found
+    at deleteProduct (C:\Users\win 10\Desktop\f2c\backend\controllers\productController.js:121:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:59:22.073Z - Error: Product not found
+    at deleteProduct (C:\Users\win 10\Desktop\f2c\backend\controllers\productController.js:121:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T05:59:58.622Z - Error: Product not found
+    at updateProduct (C:\Users\win 10\Desktop\f2c\backend\controllers\productController.js:97:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

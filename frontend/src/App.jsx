@@ -9,6 +9,8 @@ import FarmerDashboard from './pages/farmer/FarmerDashboard';
 import Marketplace from './pages/consumer/Marketplace';
 import Cart from './pages/consumer/Cart';
 import ProductDetails from './pages/consumer/ProductDetails';
+import ConsumerDashboard from './pages/consumer/ConsumerDashboard';
+import Inbox from './pages/messages/Inbox';
 import Profile from './pages/profile/Profile';
 import useAuthStore from './store/useAuthStore';
 
@@ -57,6 +59,34 @@ function App() {
               } 
             />
             
+            {/* Consumer Routes */}
+            <Route 
+              path="/dashboard" 
+              element={
+                <ProtectedRoute allowedRoles={['consumer', 'admin']}>
+                  <ConsumerDashboard />
+                </ProtectedRoute>
+              } 
+            />
+            
+            {/* Messages Routes */}
+            <Route 
+              path="/messages" 
+              element={
+                <ProtectedRoute>
+                  <Inbox />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/messages/:userId" 
+              element={
+                <ProtectedRoute>
+                  <Inbox />
+                </ProtectedRoute>
+              } 
+            />
+
             {/* Profile Route */}
             <Route 
               path="/profile" 

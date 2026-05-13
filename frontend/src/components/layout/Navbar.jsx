@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Leaf, ShoppingCart, User as UserIcon, LogOut, Bell, Globe } from 'lucide-react';
+import { Leaf, ShoppingCart, User as UserIcon, LogOut, Bell, Globe, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import useAuthStore from '../../store/useAuthStore';
 import useCartStore from '../../store/useCartStore';
@@ -64,11 +64,19 @@ const Navbar = () => {
             
             {isAuthenticated ? (
               <>
-                {user?.role === 'farmer' && (
+                {user?.role === 'farmer' ? (
                   <Link to="/farmer/dashboard" className="text-gray-600 hover:text-primary-600 font-medium">
                     {t('nav_dashboard')}
                   </Link>
+                ) : (
+                  <Link to="/dashboard" className="text-gray-600 hover:text-primary-600 font-medium">
+                    Dashboard
+                  </Link>
                 )}
+
+                <Link to="/messages" className="text-gray-600 hover:text-primary-600 relative ml-2 mr-2">
+                  <MessageSquare className="h-6 w-6" />
+                </Link>
 
                 <div className="relative ml-2 mr-2">
                   <button onClick={() => setShowNotifications(!showNotifications)} className="text-gray-600 hover:text-primary-600 relative">

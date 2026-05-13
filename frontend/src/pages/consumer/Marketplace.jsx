@@ -9,6 +9,10 @@ import useAuthStore from '../../store/useAuthStore';
 const Marketplace = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [category, setCategory] = useState('');
+  const [showFilters, setShowFilters] = useState(false);
+  
   const navigate = useNavigate();
   const { isAuthenticated } = useAuthStore();
   const { cart, setCart } = useCartStore();
@@ -41,6 +45,13 @@ const Marketplace = () => {
     }
   };
 
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                          product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = category === '' || product.category === category;
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <div className="bg-light min-h-screen pb-12">
       {/* Search Header */}
@@ -52,13 +63,31 @@ const Marketplace = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <input 
                 type="text" 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search for fresh vegetables, fruits..." 
                 className="w-full pl-10 pr-4 py-3 rounded-lg text-dark focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
-            <button className="bg-white text-primary-900 px-6 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-100 transition-colors">
-              <Filter className="h-5 w-5" /> Filter
-            </button>
+            <div className="relative">
+              <button 
+                onClick={() => setShowFilters(!showFilters)}
+                className="bg-white text-primary-900 px-6 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-100 transition-colors h-full"
+              >
+                <Filter className="h-5 w-5" /> Filter {category && `(${category})`}
+              </button>
+
+              {showFilters && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl py-2 z-50">
+                  <div className="px-4 py-2 text-xs font-bold text-gray-400 uppercase">Categories</div>
+                  <button onClick={() => {setCategory(''); setShowFilters(false)}} className={`w-full text-left px-4 py-2 hover:bg-gray-50 ${category === '' ? 'text-primary-600 font-bold' : 'text-gray-700'}`}>All</button>
+                  <button onClick={() => {setCategory('Vegetable'); setShowFilters(false)}} className={`w-full text-left px-4 py-2 hover:bg-gray-50 ${category === 'Vegetable' ? 'text-primary-600 font-bold' : 'text-gray-700'}`}>Vegetables</button>
+                  <button onClick={() => {setCategory('Fruit'); setShowFilters(false)}} className={`w-full text-left px-4 py-2 hover:bg-gray-50 ${category === 'Fruit' ? 'text-primary-600 font-bold' : 'text-gray-700'}`}>Fruits</button>
+                  <button onClick={() => {setCategory('Dairy'); setShowFilters(false)}} className={`w-full text-left px-4 py-2 hover:bg-gray-50 ${category === 'Dairy' ? 'text-primary-600 font-bold' : 'text-gray-700'}`}>Dairy</button>
+                  <button onClick={() => {setCategory('Grain'); setShowFilters(false)}} className={`w-full text-left px-4 py-2 hover:bg-gray-50 ${category === 'Grain' ? 'text-primary-600 font-bold' : 'text-gray-700'}`}>Grains</button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -71,7 +100,7 @@ const Marketplace = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
               <motion.div 
                 whileHover={{ y: -5 }}
                 key={product._id} 
@@ -113,10 +142,10 @@ const Marketplace = () => {
               </motion.div>
             ))}
             
-            {products.length === 0 && (
+            {filteredProducts.length === 0 && (
               <div className="col-span-full text-center py-12">
                 <Leaf className="h-12 w-12 text-gray-300 mx-auto mb-4" />
-                <h3 className="text-xl font-medium text-gray-600">No products available right now</h3>
+                <h3 className="text-xl font-medium text-gray-600">No products found matching your search.</h3>
               </div>
             )}
           </div>

@@ -3,7 +3,7 @@ const path = require('path');
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, 'uploads/');
+    cb(null, path.join(__dirname, '../uploads/'));
   },
   filename(req, file, cb) {
     cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);
@@ -11,14 +11,15 @@ const storage = multer.diskStorage({
 });
 
 function checkFileType(file, cb) {
-  const filetypes = /jpg|jpeg|png|webp/;
+  console.log('Uploading file:', file.originalname, file.mimetype);
+  const filetypes = /jpg|jpeg|png|webp|avif|gif|heic|heif|bmp/;
   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = filetypes.test(file.mimetype);
 
-  if (extname && mimetype) {
+  if (extname || mimetype) {
     return cb(null, true);
   } else {
-    cb('Images only!');
+    cb(new Error(`Images only! Received: ${file.originalname} (${file.mimetype})`));
   }
 }
 
