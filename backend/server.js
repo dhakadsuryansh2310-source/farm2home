@@ -28,6 +28,7 @@ app.use('/api/orders', require('./routes/orders'));
 app.use('/api/cart', require('./routes/cart'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/messages', require('./routes/messages'));
+app.use('/api/analytics', require('./routes/analytics'));
 
 app.get('/', (req, res) => {
   res.send('Farm2Table API is running...');

@@ -43,7 +43,7 @@ const getProductById = async (req, res, next) => {
 // @access  Private/Farmer
 const createProduct = async (req, res, next) => {
   try {
-    const { name, description, category, price, stock, freshnessScore, harvestDate } = req.body;
+    const { name, description, category, price, marketPrice, stock, freshnessScore, harvestDate } = req.body;
     let images = [];
 
     if (req.files) {
@@ -55,6 +55,7 @@ const createProduct = async (req, res, next) => {
       description,
       category,
       price,
+      marketPrice,
       stock,
       images,
       freshnessScore,
@@ -74,7 +75,7 @@ const createProduct = async (req, res, next) => {
 // @access  Private/Farmer
 const updateProduct = async (req, res, next) => {
   try {
-    const { name, description, category, price, stock } = req.body;
+    const { name, description, category, price, marketPrice, stock } = req.body;
 
     const product = await Product.findById(req.params.id);
 
@@ -88,6 +89,7 @@ const updateProduct = async (req, res, next) => {
       product.description = description || product.description;
       product.category = category || product.category;
       product.price = price || product.price;
+      product.marketPrice = marketPrice || product.marketPrice || (product.price * 1.2);
       product.stock = stock || product.stock;
 
       const updatedProduct = await product.save();

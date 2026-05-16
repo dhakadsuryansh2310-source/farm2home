@@ -8,6 +8,7 @@ const orderSchema = mongoose.Schema({
       productId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Product' },
       quantity: { type: Number, required: true },
       price: { type: Number, required: true },
+      marketPrice: { type: Number, required: true },
     }
   ],
   totalAmount: { type: Number, required: true },

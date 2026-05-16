@@ -130,3 +130,39 @@
 2026-05-13T05:59:58.622Z - Error: Product not found
     at updateProduct (C:\Users\win 10\Desktop\f2c\backend\controllers\productController.js:97:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T10:07:20.185Z - Error: Invalid email or password
+    at loginUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:61:13)
+2026-05-13T10:22:53.705Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T10:45:15.262Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-13T11:37:53.154Z - MongoServerSelectionError: getaddrinfo ENOTFOUND ac-yvw4cfq-shard-00-00.zblqdpw.mongodb.net
+    at Topology.selectServer (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:538:9)
+    at async executeOperationWithRetries (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+2026-05-13T11:38:13.113Z - MongoServerSelectionError: getaddrinfo ENOTFOUND ac-yvw4cfq-shard-00-00.zblqdpw.mongodb.net
+    at Topology.selectServer (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\sdam\topology.js:348:38)
+    at async executeOperationWithRetries (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\operations\execute_operation.js:157:18)
+    at async executeOperation (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\operations\execute_operation.js:83:16)
+    at async FindCursor._initialize (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\find_cursor.js:62:26)
+    at async FindCursor.cursorInit (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:620:27)
+    at async FindCursor.fetchBatch (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:654:13)
+    at async FindCursor.next (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:326:17)
+    at async [Symbol.asyncIterator] (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:254:34)
+    at async FindCursor.toArray (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:406:26)
+    at async model.Query._find (C:\Users\win 10\Desktop\f2c\backend\node_modules\mongoose\lib\query.js:2473:14)
+2026-05-16T04:33:20.485Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-05-16T04:33:26.600Z - Error: User already exists
+    at registerUser (C:\Users\win 10\Desktop\f2c\backend\controllers\authController.js:14:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

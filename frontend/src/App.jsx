@@ -12,6 +12,13 @@ import ProductDetails from './pages/consumer/ProductDetails';
 import ConsumerDashboard from './pages/consumer/ConsumerDashboard';
 import Inbox from './pages/messages/Inbox';
 import Profile from './pages/profile/Profile';
+import AdminLayout from './components/admin/AdminLayout';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import FarmerAnalytics from './pages/admin/FarmerAnalytics';
+import ConsumerAnalytics from './pages/admin/ConsumerAnalytics';
+import OrdersInsights from './pages/admin/OrdersInsights';
+import MarketComparison from './pages/admin/MarketComparison';
+import ProfitReports from './pages/admin/ProfitReports';
 import useAuthStore from './store/useAuthStore';
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
@@ -59,6 +66,27 @@ function App() {
               } 
             />
             
+            {/* Admin Routes */}
+            <Route 
+              path="/admin/*" 
+              element={
+                <ProtectedRoute allowedRoles={['admin']}>
+                  <AdminLayout>
+                    <Routes>
+                      <Route path="/" element={<AdminDashboard />} />
+                      {/* Phase 2 routes */}
+                      <Route path="/farmers" element={<FarmerAnalytics />} />
+                      <Route path="/consumers" element={<ConsumerAnalytics />} />
+                      <Route path="/orders" element={<OrdersInsights />} />
+                      <Route path="/market" element={<MarketComparison />} />
+                      <Route path="/reports" element={<ProfitReports />} />
+                      <Route path="/settings" element={<div className="p-8 text-center">Settings coming soon</div>} />
+                    </Routes>
+                  </AdminLayout>
+                </ProtectedRoute>
+              } 
+            />
+
             {/* Consumer Routes */}
             <Route 
               path="/dashboard" 

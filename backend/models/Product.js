@@ -6,6 +6,7 @@ const productSchema = mongoose.Schema({
   description: { type: String, required: true },
   category: { type: String, required: true },
   price: { type: Number, required: true },
+  marketPrice: { type: Number, required: true },
   stock: { type: Number, required: true },
   images: [{ type: String }], // Array of image URLs
   freshnessScore: { type: Number, default: 100 }, // AI score

@@ -1,4 +1,5 @@
 const Order = require('../models/Order');
+const Product = require('../models/Product');
 
 // @desc    Create new order
 // @route   POST /api/orders
@@ -11,10 +12,23 @@ const addOrderItems = async (req, res, next) => {
       res.status(400);
       throw new Error('No order items');
     } else {
+      // Lookup marketPrice for each product to ensure accuracy
+      const orderProducts = await Promise.all(products.map(async (item) => {
+        const productFromDb = await Product.findById(item.productId);
+        const marketPrice = productFromDb && productFromDb.marketPrice 
+          ? productFromDb.marketPrice 
+          : (item.price * 1.2); // Fallback: 20% higher than sale price
+        
+        return {
+          ...item,
+          marketPrice
+        };
+      }));
+
       const order = new Order({
         userId: req.user._id,
         farmerId,
-        products,
+        products: orderProducts,
         deliveryAddress,
         paymentMethod,
         totalAmount,
@@ -87,4 +101,19 @@ const getMyOrders = async (req, res, next) => {
   }
 };
 
-module.exports = { addOrderItems, getOrderById, updateOrderStatus, getMyOrders };
+// @desc    Get all orders (admin)
+// @route   GET /api/orders
+// @access  Private/Admin
+const getOrders = async (req, res, next) => {
+  try {
+    const orders = await Order.find({})
+      .populate('userId', 'name email')
+      .populate('farmerId', 'name email')
+      .sort({ createdAt: -1 });
+    res.json(orders);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { addOrderItems, getOrderById, updateOrderStatus, getMyOrders, getOrders };

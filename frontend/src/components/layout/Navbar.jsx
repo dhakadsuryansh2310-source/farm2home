@@ -64,7 +64,11 @@ const Navbar = () => {
             
             {isAuthenticated ? (
               <>
-                {user?.role === 'farmer' ? (
+                {user?.role === 'admin' ? (
+                  <Link to="/admin" className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-sm">
+                    Universal Dashboard
+                  </Link>
+                ) : user?.role === 'farmer' ? (
                   <Link to="/farmer/dashboard" className="text-gray-600 hover:text-primary-600 font-medium">
                     {t('nav_dashboard')}
                   </Link>

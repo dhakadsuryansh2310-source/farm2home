@@ -81,6 +81,7 @@ const Register = () => {
             <select name="role" className="input-field bg-white" value={formData.role} onChange={handleChange}>
               <option value="consumer">Buy Fresh Produce</option>
               <option value="farmer">Sell My Harvest</option>
+              <option value="admin">Platform Admin (Dev Only)</option>
             </select>
           </div>
 
